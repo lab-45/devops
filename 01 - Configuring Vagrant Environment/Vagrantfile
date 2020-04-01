@@ -10,15 +10,15 @@ VAGRANTFILE_API_VERSION="2"
    v.linked_clone = true
   end
 
-  # Application server 1.
-  config.vm.define "app1" do |app|
-    app.vm.hostname = "orc-app1.test"
+  # Server 1.
+  config.vm.define "server-01" do |app|
+    app.vm.hostname = "server-01"
     app.vm.network :private_network, ip: "192.168.60.4"
   end
 
-  # Application server 2.
-  config.vm.define "app2" do |app|
-    app.vm.hostname = "orc-app2.test"
+  # Server 2.
+  config.vm.define "server-02" do |app|
+    app.vm.hostname = "server-02"
     app.vm.network :private_network, ip: "192.168.60.5"
   end
 
